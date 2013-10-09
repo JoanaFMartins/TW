@@ -27,6 +27,6 @@ function seeScore(){
 }
 
 //Fecha o Quadro de Honra
-function close(){
+function closeScore(){
 	document.getElementById("score").style.display = "none";
 }

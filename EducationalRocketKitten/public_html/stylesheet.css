@@ -54,6 +54,7 @@ body{
 #config{
 	background-color: #669999;
 	border: 4px solid black;
+	float: right;
 	margin-top: 5%;
 	margin-bottom: 5%;
 	margin-left: 5%;
@@ -90,7 +91,23 @@ body{
 }
 
 #score{
+	background-color: #669999;
 	display: none;
+	border: 4px solid black;
+	text-align: center;
+	position: absolute;
+	margin-top: -25%;
+	margin-left: 20%;
+	height: 60%;
+	width: 60%;
+	
+}
+
+#score table{
+	background-color: rgb(165, 210, 218);
+	text-align: center;
+	margin-left: 18%;
+	font-size: 26px;
 }
 
 #game{
@@ -109,8 +126,9 @@ body{
 }
 
 #footer{
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	margin-right: 2%;
+	clear: both;
+	text-align: right;
+	font-size: 12px;
+	margin-top: 10%;
+	margin-righ: 4%;
 }
