@@ -50,7 +50,7 @@
 			Seleciona o Tipo de Jogo:
 			<!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
 			<select name="GameType">
-				<option selected="selected">Aritmética</option>
+				<option selected="selected" id="gType">Aritmética</option>
 				<option>Sinónimos</option>
 				<option>Antónimos</option>
 				<option>Tradução</option>
@@ -61,7 +61,7 @@
 			Seleciona o Modo de Jogo:
 			<!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
 			<select name="GameMode">
-				<option selected="selected">Individual</option>
+				<option selected="selected" id="gMode">Individual</option>
 				<option>Competitivo</option>
 			</select>
 		
@@ -76,7 +76,7 @@
 		
 			<p/>
 		
-			<input type="submit" name="do" value="Bora jogar!"/>
+			<input type="button" value="Bora jogar!" onclick="validateGameMode()"/>
 		
 			</div>
 			
