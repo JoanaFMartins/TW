@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel=StyleSheet href="main.js" type="text/js">
+		<script type="text/javascript" src="main.js"></script>
+		
+		<title>Educational Rocket Kitten</title>
+	</head>
+	
+	<body>
+
+	<!-- div que contem todo o trabalho -->
+	<div id="start">
+	
+		<!-- Contém o nome e/ou logótipo da aplicação, podendo ainda conter alguma informação adicional.-->
+		<div id="header">
+		
+			<img src="topo.png" alt="Topo"> <h1 id="user"></h1> <img>
+		
+		</div>
+		
+		<!-- Nome de utilizador e password, necessários para o modo competitivo. -->
+		<div id="autentication">
+		
+			<p>Faz já o teu login!</p>
+		
+			<form>
+				Username:
+				<input type="text" id="username" name="username" value="username" size="15" maxlength="15" />
+				<p/>
+				Password:
+				<input type="password" name="password" value="secret" size="15" maxlength="15" />
+				<p/>
+				<input type="button" value="Efetua o teu Login." onclick="hide()"/>
+				<!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
+				<input type="button" value="Efetua o teu Registo." onclick="errorMessage()"/>
+				<!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
+				
+			</form>
+		
+		</div>
+		
+		<div id="left">
+		
+			<!-- Selecção de tipo de jogo (aritmética, sinónimos, antónimos, tradução), modo (individual ou competitivo) e tamanho (o tamanho 1 corresponde a uma matriz de 3×3, o 2 a uma matriz de 4×4 e o 3 a uma matriz de 5×5 ladrilhos). -->
+			<div id="config">
+		
+			Seleciona o Tipo de Jogo:
+			<!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
+			<select name="GameType">
+				<option selected="selected">Aritmética</option>
+				<option>Sinónimos</option>
+				<option>Antónimos</option>
+				<option>Tradução</option>
+			</select>
+		
+			<p/>
+		
+			Seleciona o Modo de Jogo:
+			<!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
+			<select name="GameMode">
+				<option selected="selected">Individual</option>
+				<option>Competitivo</option>
+			</select>
+		
+			<p/>
+		
+			Seleciona o Tamanho do Jogo:
+			<select name="GameBoard">
+				<option selected="selected">1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+		
+			<p/>
+		
+			<input type="submit" name="do" value="Bora jogar!"/>
+		
+			</div>
+			
+			<!-- Permite iniciar um jogo, abandoná-lo, e sincronizar com um adversário (em modo competitivo). -->
+			<div class="control">
+			
+			Menu
+			<p/>
+			<input type="submit" name="do" value="Começar o jogo."/>
+			<input type="submit" name="do" value="Desistir do jogo."/>
+			<p/>
+			<input type="submit" name="do" value="Sincronizar com um adversário."/> <!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
+		
+			</div>
+			
+			<!-- Tabela com o top dos melhores resultados para as configurações escolhidas -->
+			<div class="score">
+				<p>
+				<table border="4">
+					<caption>Quadro de Honra</caption>
+					<thead>
+						<tr>
+							<td>Jogador</td>
+							<th>Tamanho 1</th>
+							<th>Tamanho 2</th>
+							<th>Tamanho 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th> &nbsp; <!-- Calcular --> </th>
+							<td> <!-- Calcular --> </td>
+							<td> <!-- Calcular --> </td>
+							<td> <!-- Calcular --> </td>
+						</tr>
+						<tr>
+							<th> &nbsp; <!-- Calcular --> </th>
+							<td> <!-- Calcular --> </td>
+							<td> <!-- Calcular --> </td>
+							<td> <!-- Calcular --> </td>
+						</tr>
+						<tr>
+							<th> &nbsp; <!-- Calcular --> </th>
+							<td> <!-- Calcular --> </td>
+							<td> <!-- Calcular --> </td>
+							<td> <!-- Calcular --> </td>
+						</tr>
+						<tr>
+							<th> &nbsp; <!-- Calcular --> </th>
+							<td> <!-- Calcular --> </td>
+							<td> <!-- Calcular --> </td>
+							<td> <!-- Calcular --> </td>
+						</tr>
+						<tr>
+							<th> &nbsp; <!-- Calcular --> </th>
+							<td> <!-- Calcular --> </td>
+							<td> <!-- Calcular --> </td>
+							<td> <!-- Calcular --> </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		</div>
+		
+		<div id="game">
+		
+			<!-- Tabuleiro do jogo, incluindo espaço para uma imagem com 640×480 px (a ser coberta por ladrilhos) e para as opções de resposta. -->
+			<div class="board">
+			</div>
+			
+			<!-- Mostra o progresso do(s) jogador(es) e a sua pontuação, e assinala o fim do jogo, indicando o vencedor (em modo competitivo). -->
+			<div class="progress">
+				Total de quadros a retirar:
+				<!-- Contador... -->
+				<p/>
+				Pontuação:
+				<!-- Pontuação do jogador. -->
+				</p>
+				Tempo restante:
+				<!-- Contador de tempo de jogo. -->
+			</div>
+		
+		</div>
+		
+		<div id="footer">
+		
+			<p>Educational Rocket Kitten - Created By Joana Martins & Francisco Vale</p>
+		
+		</div>
+	
+	</div>
+
+	</body>
+</html>
