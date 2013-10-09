@@ -21,3 +21,12 @@ function validateGameMode(){
 		alert("Apenas o modo individual e o tipo de jogo aritmética estão disponíveis.");
 	}
 }
+
+function seeScore(){
+	document.getElementById("score").style.display = "block";
+}
+
+//Fecha o Quadro de Honra
+function close(){
+	document.getElementById("score").style.display = "none";
+}

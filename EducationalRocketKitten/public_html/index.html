@@ -49,7 +49,7 @@
 		
 			Seleciona o Tipo de Jogo:
 			<!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
-			<select name="GameType">
+			<select id="GameType">
 				<option selected="selected" id="gType">Aritmética</option>
 				<option>Sinónimos</option>
 				<option>Antónimos</option>
@@ -60,7 +60,7 @@
 		
 			Seleciona o Modo de Jogo:
 			<!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
-			<select name="GameMode">
+			<select id="GameMode">
 				<option selected="selected" id="gMode">Individual</option>
 				<option>Competitivo</option>
 			</select>
@@ -68,7 +68,7 @@
 			<p/>
 		
 			Seleciona o Tamanho do Jogo:
-			<select name="GameBoard">
+			<select id="GameBoard">
 				<option selected="selected">1</option>
 				<option>2</option>
 				<option>3</option>
@@ -80,18 +80,6 @@
 		
 			</div>
 			
-			<!-- Permite iniciar um jogo, abandoná-lo, e sincronizar com um adversário (em modo competitivo). -->
-			<div class="control">
-			
-			Menu
-			<p/>
-			<input type="submit" name="do" value="Começar o jogo."/>
-			<input type="submit" name="do" value="Desistir do jogo."/>
-			<p/>
-			<input type="submit" name="do" value="Sincronizar com um adversário."/> <!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
-		
-			</div>
-			
 			<!-- Tabela com o top dos melhores resultados para as configurações escolhidas -->
 			
 			<div id="imageScore">
@@ -99,8 +87,41 @@
 			<img src=score.jpg alt="Quadro de Honra" onclick="seeScore()"/>
 			
 			</div>
+		
+		</div>
+		
+		<div id="game">
+		
+			<!-- Permite iniciar um jogo, abandoná-lo, e sincronizar com um adversário (em modo competitivo). -->
+			<div id="control">
 			
-			<div id="score">
+				Menu do Jogo:
+				<p/>
+				<input type="submit" name="do" value="Começar o jogo."/>
+				<input type="submit" name="do" value="Desistir do jogo."/>
+				<input type="submit" name="do" value="Sincronizar com um adversário."/> <!-- Colocar mensagem de erro por o jogo ainda não estar disponível em modo competitivo -->
+		
+			</div>
+		
+			<!-- Tabuleiro do jogo, incluindo espaço para uma imagem com 640×480 px (a ser coberta por ladrilhos) e para as opções de resposta. -->
+			<div class="board">
+			</div>
+			
+			<!-- Mostra o progresso do(s) jogador(es) e a sua pontuação, e assinala o fim do jogo, indicando o vencedor (em modo competitivo). -->
+			<div id="progress">
+				Total de quadros a retirar:
+				<!-- Contador... -->
+				<p/>
+				Pontuação:
+				<!-- Pontuação do jogador. -->
+				</p>
+				Tempo restante:
+				<!-- Contador de tempo de jogo. -->
+			</div>
+		
+		</div>
+		
+		<div id="score">
 				<p>
 				<table border="4">
 					<caption>Quadro de Honra</caption>
@@ -145,29 +166,10 @@
 						</tr>
 					</tbody>
 				</table>
+				
+				<input type="button" value="Fechar." onclick="close()"/>
+				
 			</div>
-		
-		</div>
-		
-		<div id="game">
-		
-			<!-- Tabuleiro do jogo, incluindo espaço para uma imagem com 640×480 px (a ser coberta por ladrilhos) e para as opções de resposta. -->
-			<div class="board">
-			</div>
-			
-			<!-- Mostra o progresso do(s) jogador(es) e a sua pontuação, e assinala o fim do jogo, indicando o vencedor (em modo competitivo). -->
-			<div class="progress">
-				Total de quadros a retirar:
-				<!-- Contador... -->
-				<p/>
-				Pontuação:
-				<!-- Pontuação do jogador. -->
-				</p>
-				Tempo restante:
-				<!-- Contador de tempo de jogo. -->
-			</div>
-		
-		</div>
 		
 		<div id="footer">
 		

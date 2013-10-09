@@ -21,7 +21,7 @@ body{
 }
 
 #header h1{
-	color: orange;
+	color: #FF3300;
 }
 
 #login{
@@ -51,6 +51,26 @@ body{
 	max-width: auto;
 }
 
+#config{
+	background-color: #669999;
+	border: 4px solid black;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding: 0 0 1 0;
+}
+
+#control{
+	background-color: #669999;
+	border: 4px solid black;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 25%;
+	margin-right: 25%;
+	padding: 0 0 1 0;
+}
+
 #gameType{
 	display: block;
 }
@@ -60,8 +80,13 @@ body{
 }
 
 #imageScore{
+	background-color: white;
 	display: block;
 	border: 4px solid black;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 #score{
